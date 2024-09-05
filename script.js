@@ -6,7 +6,6 @@ const Endpoints = async () => {
     })
     .then((data) => {
       endpoints = data;
-      //   console.log(endpoints);
     })
     .catch((err) => {
       console.log(err);
