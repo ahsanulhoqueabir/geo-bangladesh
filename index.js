@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const app = express();
 const port = process.env.port || 3000;
 const divisions = require("./data/divisions.json");
@@ -7,7 +8,8 @@ const upazilas = require("./data/upazilas.json");
 const unions = require("./data/unions.json");
 
 app.get("/", (req, res) => {
-  res.send("Welcome to GEO Bangladesh Server!");
+  // res.send("Welcome to GEO Bangladesh Server!");
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 // -------------Bangla Route ----------------------
 const routeBn = express.Router();
@@ -80,6 +82,44 @@ routeEn.get("/upazilas/:name", (req, res) => {
 });
 routeEn.get("/unions", (req, res) => {
   res.send(unions);
+});
+
+routeEn.get("/all", (req, res) => {
+  const allData = [];
+  divisions.forEach((div) => {
+    const divData = {
+      division: div.name,
+      districts: [],
+    };
+    const dists = districts.filter((dist) => {
+      return dist.division_id === div.id;
+    });
+    dists.forEach((dist) => {
+      const distData = {
+        district: dist.name,
+        upazilas: [],
+      };
+      const upas = upazilas.filter((upa) => {
+        return upa.district_id === dist.id;
+      });
+      upas.forEach((upa) => {
+        const upaData = {
+          upazila: upa.name,
+          unions: [],
+        };
+        const unis = unions.filter((uni) => {
+          return uni.upazilla_id === upa.id;
+        });
+        unis.forEach((uni) => {
+          upaData.unions.push(uni.name);
+        });
+        distData.upazilas.push(upaData);
+      });
+      divData.districts.push(distData);
+    });
+    allData.push(divData);
+  });
+  res.send(allData);
 });
 
 app.use("/api/v1/bn", routeBn);

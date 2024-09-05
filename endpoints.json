@@ -1,0 +1,230 @@
+[
+  {
+    "title": "To get All Division Name",
+    "url": "/divisions",
+    "method": "GET",
+    "description": "To get All Division Name",
+    "res": [
+      {
+        "id": "1",
+        "name": "Chattogram",
+        "bn_name": "চট্টগ্রাম",
+        "url": "www.chittagongdiv.gov.bd"
+      },
+      {
+        "id": "2",
+        "name": "Rajshahi",
+        "bn_name": "রাজশাহী",
+        "url": "www.rajshahidiv.gov.bd"
+      }
+    ]
+  },
+  {
+    "title": "To get all districts under a Division",
+    "url": "/division/{division_Name}",
+    "method": "GET",
+    "description": "To get all districts under a Division",
+    "note": "division_Name is the name of the division. Example for Dhaka",
+    "res": [
+      {
+        "id": "40",
+        "division_id": "6",
+        "name": "Narsingdi",
+        "bn_name": "নরসিংদী",
+        "lat": "23.932233",
+        "lon": "90.71541",
+        "url": "www.narsingdi.gov.bd"
+      },
+      {
+        "id": "41",
+        "division_id": "6",
+        "name": "Gazipur",
+        "bn_name": "গাজীপুর",
+        "lat": "24.0022858",
+        "lon": "90.4264283",
+        "url": "www.gazipur.gov.bd"
+      }
+    ]
+  },
+  {
+    "title": "To get all upazilla of a specific district",
+    "url": "/districts/{district_Name}",
+    "method": "GET",
+    "description": "To get all upazilla of a specific district",
+    "note": "district_Name is the name of the district. Example for chattogram",
+    "res": [
+      {
+        "id": "65",
+        "district_id": "8",
+        "name": "Rangunia",
+        "bn_name": "রাঙ্গুনিয়া",
+        "url": "rangunia.chittagong.gov.bd"
+      },
+      {
+        "id": "66",
+        "district_id": "8",
+        "name": "Sitakunda",
+        "bn_name": "সীতাকুন্ড",
+        "url": "sitakunda.chittagong.gov.bd"
+      }
+    ]
+  },
+  {
+    "title": "To get all unions of a upazilla",
+    "url": "/upazilas/{upazilla_Name}",
+    "method": "GET",
+    "description": "To get all unions of a upazilla",
+    "note": "upazilla_Name is the name of the upazilla. Example for chandanaish",
+    "res": [
+      {
+        "id": "729",
+        "upazilla_id": "73",
+        "name": "Kanchanabad",
+        "bn_name": "কাঞ্চনাবাদ",
+        "url": "kanchanabadup.chittagong.gov.bd"
+      },
+      {
+        "id": "730",
+        "upazilla_id": "73",
+        "name": "Joara",
+        "bn_name": "জোয়ারা",
+        "url": "joaraup.chittagong.gov.bd"
+      }
+    ]
+  },
+  {
+    "title": "All Districts",
+    "url": "/districts",
+    "method": "GET",
+    "description": "To get all districts",
+    "res": [
+      {
+        "id": "1",
+        "division_id": "1",
+        "name": "Comilla",
+        "bn_name": "কুমিল্লা",
+        "lat": "23.4682747",
+        "lon": "91.1788135",
+        "url": "www.comilla.gov.bd"
+      },
+      {
+        "id": "2",
+        "division_id": "1",
+        "name": "Feni",
+        "bn_name": "ফেনী",
+        "lat": "23.023231",
+        "lon": "91.3840844",
+        "url": "www.feni.gov.bd"
+      },
+      {
+        "id": "3",
+        "division_id": "1",
+        "name": "Brahmanbaria",
+        "bn_name": "ব্রাহ্মণবাড়িয়া",
+        "lat": "23.9570904",
+        "lon": "91.1119286",
+        "url": "www.brahmanbaria.gov.bd"
+      }
+    ]
+  },
+  {
+    "title": "All Upazillas",
+    "url": "/upazilas",
+    "method": "GET",
+    "description": "To get all upazillas",
+    "note": "Returns an Array of Objects where each object represents an upazilla",
+    "res": [
+      {
+        "id": "1",
+        "district_id": "1",
+        "name": "Debidwar",
+        "bn_name": "দেবিদ্বার",
+        "url": "debidwar.comilla.gov.bd"
+      },
+      {
+        "id": "2",
+        "district_id": "1",
+        "name": "Barura",
+        "bn_name": "বরুড়া",
+        "url": "barura.comilla.gov.bd"
+      },
+      {
+        "id": "3",
+        "district_id": "1",
+        "name": "Brahmanpara",
+        "bn_name": "ব্রাহ্মণপাড়া",
+        "url": "brahmanpara.comilla.gov.bd"
+      }
+    ]
+  },
+  {
+    "title": "All Unions",
+    "url": "/unions",
+    "method": "GET",
+    "description": "To get all unions",
+    "note": "Returns an Array of Objects where each object represents a union",
+    "res": [
+      {
+        "id": "1",
+        "upazilla_id": "1",
+        "name": "Subil",
+        "bn_name": "সুবিল",
+        "url": "subilup.comilla.gov.bd"
+      },
+      {
+        "id": "2",
+        "upazilla_id": "1",
+        "name": "North Gunaighor",
+        "bn_name": "উত্তর গুনাইঘর",
+        "url": "gunaighornorthup.comilla.gov.bd"
+      },
+      {
+        "id": "3",
+        "upazilla_id": "1",
+        "name": "South Gunaighor",
+        "bn_name": "দক্ষিণ গুনাইঘর",
+        "url": "gunaighorsouth.comilla.gov.bd"
+      }
+    ]
+  },
+  {
+    "title": "Containing All division->districts->upazilla->unions",
+    "url": "/all",
+    "method": "GET",
+    "description": "Containing All division->districts->upazilla->unions",
+    "note": "This API will return all divisions, districts, upazillas and union/municipal areas in the response body as nested JSON objects",
+    "res": [],
+    "exp": [
+      {
+        "division": "Chattogram",
+        "districts": [
+          {
+            "district": "Comilla",
+            "upazilas": [
+              {
+                "upazila": "Barura",
+                "unions": [
+                  "Aganagar",
+                  "Bhabanipur",
+                  "North Khoshbas",
+                  "South Khoshbas",
+                  "Jhalam",
+                  "Chitodda",
+                  "North Shilmuri",
+                  "South Shilmuri",
+                  "Galimpur",
+                  "Shakpur",
+                  "Bhaukshar",
+                  "Adda",
+                  "Adra",
+                  "Payalgacha",
+                  "Laxmipur"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

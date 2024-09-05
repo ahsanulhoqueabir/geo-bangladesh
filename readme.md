@@ -1,6 +1,6 @@
 ## Geo-Bangladesh Server
 
-Server Domain: https://geobangladesh.netlify.app/.netlify/functions/api/v1/en
+Server Domain: https://geobangladesh.netlify.app/.netlify/functions/api/v1/en <br>
 Server Domain: https://geo-bangladesh.vercel.app/api/v1/en
 
 ## Endpoint
